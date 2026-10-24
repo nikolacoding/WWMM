@@ -101,7 +101,6 @@ namespace WWMM
 
                             if (match)
                             {
-                                // Sačuvaj tačnu dužinu i vrijednosti originalnih bajtova
                                 sandOriginalBytesFound = new byte[pattern.Length];
                                 Array.Copy(buffer, i, sandOriginalBytesFound, 0, pattern.Length);
 

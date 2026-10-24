@@ -64,7 +64,6 @@ namespace WWMM {
 
             try
             {
-                // 1. Pronađi AOB adresu za pijesak ako već nije pronađena
                 if (infiniteSandAddress == IntPtr.Zero)
                 {
                     infiniteSandAddress = memoryManager.sandFindAobAddress(processHandle, gameProcess);
@@ -76,22 +75,20 @@ namespace WWMM {
                     return false;
                 }
 
-                // 2. Pripremi NOP bajtove jednake dužine kao originalna instrukcija
                 byte[] bytesToWrite;
                 if (enable)
                 {
                     bytesToWrite = new byte[memoryManager.sandOriginalBytesFound.Length];
                     for (int i = 0; i < bytesToWrite.Length; i++)
                     {
-                        bytesToWrite[i] = 0x90; // NOP (No Operation)
+                        bytesToWrite[i] = 0x90;
                     }
                 }
                 else
                 {
-                    bytesToWrite = memoryManager.sandOriginalBytesFound; // Vrati originalne bajtove
+                    bytesToWrite = memoryManager.sandOriginalBytesFound;
                 }
 
-                // 3. Upisi u memoriju
                 bool success = NativeSetup.WriteProcessMemory(processHandle, infiniteSandAddress, bytesToWrite, bytesToWrite.Length, out _);
 
                 if (success)
