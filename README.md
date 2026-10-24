@@ -32,6 +32,10 @@
 3. Pritisni **Check detection** da se provjeri da li je povezivanje uspjelo.
 4. Uključiti željene cheatove koristeći dostupne checkboxeve.
 
+# Interface
+<img width="369" height="135" alt="image" src="https://github.com/user-attachments/assets/2b2296ee-59e4-4343-ba3a-7b302b6d913a" />
+
+
 # License & disclaimer
 This free mod is created for Prince of Persia: Warrior Within, property of Ubisoft Montreal. Everything included within merely works with code, binaries and intellectual property provided by Ubisoft and requires a purchased version of the game.
 
