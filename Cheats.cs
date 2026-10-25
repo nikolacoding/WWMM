@@ -49,7 +49,7 @@ namespace WWMM {
             Process[] processes = Process.GetProcessesByName("POP2");
             if (processes.Length == 0)
             {
-                MessageBox.Show("Igra 'POP2.exe' nije pokrenuta!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("The game (process) 'POP2.exe' doesn't seem to be running.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -58,7 +58,7 @@ namespace WWMM {
 
             if (processHandle == IntPtr.Zero)
             {
-                MessageBox.Show("Pokrenite trenažer kao Administrator!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Run this as administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -71,7 +71,7 @@ namespace WWMM {
 
                 if (infiniteSandAddress == IntPtr.Zero)
                 {
-                    MessageBox.Show("Nije moguće pronaći AOB uzorak za pijesak.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Unable to locate the required AOB pattern.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
 
